@@ -1,0 +1,25 @@
+<div *ngIf="!showQuestion">
+<div class="welcome-page">
+    <div class="welcome-text">
+        <p class="welcome-title">Welcome to the</p>
+        <p class ="welcome-subtitle">Frontend Quiz!</p>
+        <p class="welcome-description">Pick a subject to get started.</p>
+    </div>
+<div class="subject-list-wrapper">
+    <ul class="subject-list">
+       @for (quiz of quizzes; track $index) {
+        <li class="subject-item" role="button" (click)="goToQuestion(quiz.title)">
+            <div class="icon" [style.background-color]="quiz.iconBg"><img [src]="quiz.icon" alt=""></div>
+            <span>{{quiz.title}}</span>
+          </li>
+       }
+    </ul>
+</div>
+</div>
+</div>
+
+<div *ngIf="showQuestion">
+    <app-question-page [questions]="selectedQuiz.questions"></app-question-page>
+  </div>
+
+  
