@@ -12,12 +12,11 @@
     </div>
 <div class="subject-list-wrapper">
     <ul class="subject-list">
-        @for (quiz of quizzes; track $index) {
+    
         <li class="subject-item">
-            <div class="icon">{{ ['A', 'B', 'C', 'D'][$index] }}</div>
-            <span>{{ quiz.questions[0].options[$index] }}</span>
+            <div class="icon">A</div>
+            <span> Html</span>
         </li>
-        }
     </ul>
 </div>
 </div>

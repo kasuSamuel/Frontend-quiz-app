@@ -1,4 +1,3 @@
-<div *ngIf="!showQuestion">
 <div class="welcome-page">
     <div class="welcome-text">
         <p class="welcome-title">Welcome to the</p>
@@ -7,19 +6,12 @@
     </div>
 <div class="subject-list-wrapper">
     <ul class="subject-list">
-       @for (quiz of quizzes; track $index) {
-        <li class="subject-item" role="button" (click)="goToQuestion(quiz.title)">
-            <div class="icon" [style.background-color]="quiz.iconBg"><img [src]="quiz.icon" alt=""></div>
-            <span>{{quiz.title}}</span>
+        <li class="subject-item">
+            <div class="icon" style="background-color: red" ><img src="./assets/images/icon-html.svg" alt=""></div>
+            <span>Html</span>
           </li>
-       }
     </ul>
 </div>
 </div>
-</div>
 
-<div *ngIf="showQuestion">
-    <app-question-page [questions]="selectedQuiz.questions"></app-question-page>
-  </div>
-
-  
+     
