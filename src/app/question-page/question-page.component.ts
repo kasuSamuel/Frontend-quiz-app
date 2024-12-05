@@ -14,12 +14,16 @@ export class QuestionPageComponent implements OnInit{
   
 
   constructor(private dataService: DataService) {
-    this.dataService.getQuizzes().subscribe((quizzes: QuizItem[]) => {
-      this.quizzes =  quizzes;
-      console.log(this.quizzes);
-      console.log(this.quizzes[0].questions);
-    })
+    // this.dataService.getQuizzes().subscribe((quizzes: QuizItem[]) => {
+    //   this.quizzes =  quizzes;
+    //   // console.log(this.quizzes);
+    //   // console.log(this.quizzes[0].questions);
+    // })
+
   }
   ngOnInit(): void {
+    this.dataService.subjectTitle$.subscribe((title: string) => {
+      console.log('hi',title);
+    })
   }
 }

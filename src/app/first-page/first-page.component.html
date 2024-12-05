@@ -7,7 +7,7 @@
 <div class="subject-list-wrapper">
     <ul class="subject-list">
        @for (quiz of quizzes; track $index) {
-        <li class="subject-item" (click)="goToQuestion()">
+        <li class="subject-item" (click)="goToQuestion(quiz)">
             <div class="icon" ><img src="{{quiz.icon}}" alt=""></div>
             <span>{{quiz.title}}</span>
           </li>

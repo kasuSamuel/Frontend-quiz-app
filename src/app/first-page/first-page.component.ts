@@ -27,7 +27,10 @@ export class FirstPageComponent implements OnInit {
   }
 
   
-  goToQuestion() {
+  goToQuestion(quiz: QuizItem) {
+     console.log(`Quiz clicked: `, quiz);
+    console.log(quiz.questions[0]);
+    this.dataService.changeTitle(quiz.title);
     this.showQuestion = true;
   }
 
