@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ToggleBtnComponent } from './toggle-btn.component';
+import { SubjectComponent } from './subject.component';
 
-describe('ToggleBtnComponent', () => {
-  let component: ToggleBtnComponent;
-  let fixture: ComponentFixture<ToggleBtnComponent>;
+describe('SubjectComponent', () => {
+  let component: SubjectComponent;
+  let fixture: ComponentFixture<SubjectComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ToggleBtnComponent]
+      imports: [SubjectComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ToggleBtnComponent);
+    fixture = TestBed.createComponent(SubjectComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
