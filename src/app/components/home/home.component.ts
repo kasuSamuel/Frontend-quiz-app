@@ -1,14 +1,16 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input,ChangeDetectionStrategy } from '@angular/core';
 import { SubjectComponent } from "./subject/subject.component";
 import { DataServiceService } from '../../shared/data-service.service';
-import { Quizdata, Questions } from '../../shared/data.interface';
+import { Quizdata} from '../../shared/data.interface';
 import { Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [SubjectComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
+
 })
 export class HomeComponent {
   data: Quizdata[] = [];

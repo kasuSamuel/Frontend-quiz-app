@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input,ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-subject',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './subject.component.html',
-  styleUrl: './subject.component.css'
+  styleUrl: './subject.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SubjectComponent {
   @Input() subject = '';

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Quizdata, Questions } from '../../app/shared/data.interface';
+import { Quizdata } from '../../app/shared/data.interface';
 @Injectable({
   providedIn: 'root'
 })
